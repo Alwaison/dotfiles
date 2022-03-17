@@ -113,12 +113,22 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
+# Aliases
+# === General aliases ===
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-alias gitcfp="git checkout master && git fetch origin && git pull"
 alias nvim="/home/joan.fernandez/nvim.appimage"
 alias e="ranger"
+
+# === Git ===
+alias gitcfp="git checkout master && git fetch origin && git pull"
+alias gitprune="git remote prune origin"
+alias gitbranch="git branch -va"
+
+# === Docker ===
+alias dcbuild="CURRENT_UID=$(id -u):$(id -g) docker-compose up -d --build"
+alias dcdown="docker-compose down --remove-orphans"
+alias dcrun="CURRENT_UID=$(id -u):$(id -g) docker-compose run"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
