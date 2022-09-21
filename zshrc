@@ -150,3 +150,6 @@ zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
 
 autoload -Uz compinit && compinit
+
+# Add bat functions
+source ~/.zsh/.bat_functions.sh
