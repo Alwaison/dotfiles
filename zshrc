@@ -87,7 +87,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -124,6 +124,7 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias nvim="/home/joan.fernandez/nvim.appimage"
 alias e="ranger"
+alias obsidian="/home/joan.fernandez/obsidian.appimage"
 
 # === Git ===
 alias gitcfp="git checkout master && git fetch origin && git pull"
@@ -134,6 +135,9 @@ alias gitbranch="git branch -va"
 alias dcbuild="CURRENT_UID=$(id -u):$(id -g) docker-compose up -d --build"
 alias dcdown="docker-compose down --remove-orphans"
 alias dcrun="CURRENT_UID=$(id -u):$(id -g) docker-compose run"
+
+# === Rust apps ===
+alias cat="bat"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
